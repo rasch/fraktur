@@ -1,9 +1,14 @@
 #!/usr/bin/env node
 
+import readline from "readline"
 import { encode, decode } from "./index.js"
 
-console.log(
-  /^-(?:d|-decode)$/.test(process.argv[2])
-    ? decode(process.argv.slice(3).join(" "))
-    : encode(process.argv.slice(2).join(" "))
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout,
+  terminal: false
+})
+
+rl.on("line", ln =>
+  console.log((/^-(?:d|-decode)$/.test(process.argv[2]) ? decode : encode)(ln))
 )
