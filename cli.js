@@ -1,3 +1,5 @@
+#!/usr/bin/env node
+
 import { encode, decode } from "./index.js"
 
 console.log(
