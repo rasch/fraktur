@@ -7,7 +7,7 @@ sources:
 environment:
   project: fraktur
 secrets:
-  - 6845da96-bf4e-4eed-81e4-35f0c5541d63 # NPM publish token
+  - 2b8f0d2a-cab9-451d-b684-6b89582fb7b0 # NPM publish token
 tasks:
   - test: |
       cd "$project"
